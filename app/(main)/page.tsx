@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import { useAuth } from "@/context/auth-context";
@@ -291,8 +290,4 @@ export default function Home() {
       </AnimatePresence>
     </div>
   );
-=======
-export default function Homepage() {
-  return <div className=" flex justify-center text-amber-300">HomePage</div>;
->>>>>>> e5fdb6adbd7aeb3eabf5c05969815a9da451a9a3
 }
