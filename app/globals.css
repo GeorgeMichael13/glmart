@@ -120,3 +120,21 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes ball-bounce {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(50px) translateY(-30px);
+  }
+  50% {
+    transform: translateX(100px) translateY(0);
+  }
+  75% {
+    transform: translateX(50px) translateY(-30px);
+  }
+}
+
+.bouncing-ball {
+  animation: ball-bounce 2s infinite ease-in-out;
+}
