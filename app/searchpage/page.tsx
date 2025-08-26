@@ -1,7 +1,7 @@
 "use client";
 
 import { useAuth } from "@/context/auth-context";
-import { useCart } from "@/context/cart-context";
+import { useCart, CartItem } from "@/context/cart-context";
 import { useEffect, useState } from "react";
 
 interface Product {
@@ -83,14 +83,16 @@ export default function SearchPage() {
                   {product.description}
                 </p>
                 <button
-                  onClick={() =>
-                    addToCart({
-                      id: product.id,
+                  onClick={() => {
+                    const cartItem: CartItem = {
+                      id: String(product.id), // ensure ID matches CartItem type
                       title: product.title,
                       price: product.price,
-                      image: product.images[0],
-                    })
-                  }
+                      image: product.images[0] || "/placeholder.png",
+                      quantity: 1,
+                    };
+                    addToCart(cartItem);
+                  }}
                   className="mt-4 px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-800 via-purple-700 to-purple-600 hover:opacity-90 transition"
                 >
                   Add to Cart
