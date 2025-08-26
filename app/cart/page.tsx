@@ -86,7 +86,6 @@ export default function CartPage() {
           <div className="max-w-4xl mx-auto mt-8">
             <h3 className="text-2xl font-bold mb-4">You may also like</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {/* Placeholder: In production, map real product recommendations */}
               {[1, 2, 3, 4].map((n) => (
                 <div
                   key={n}
