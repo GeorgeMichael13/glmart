@@ -13,12 +13,14 @@ interface Product {
   description: string;
   category: { id: number; name: string };
   images: string[];
+  quantity: number;
 }
 
 interface Category {
   id: number;
   name: string;
   image: string;
+  quamtity: number;
 }
 
 export default function Home() {
@@ -222,7 +224,6 @@ export default function Home() {
                     title: product.title,
                     price: product.price,
                     image: product.images[0],
-                    quantity: 1,
                   });
                 }}
                 className="mt-4 px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-800 via-purple-700 to-purple-600 hover:opacity-90 transition"
@@ -276,7 +277,6 @@ export default function Home() {
                     title: selectedProduct.title,
                     price: selectedProduct.price,
                     image: selectedProduct.images[0],
-                    quantity: 1,
                   });
                   setSelectedProduct(null);
                 }}
